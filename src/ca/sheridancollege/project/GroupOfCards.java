@@ -1,56 +1,65 @@
-/**
- * SYST 17796 Project Base code.
- * Students can modify and extend to implement their game.
- * Add your name as an author and the date!
- */
 package ca.sheridancollege.project;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 /**
- * A concrete class that represents any grouping of cards for a Game. HINT, you might want to subclass this more than
- * once. The group of cards has a maximum size attribute which is flexible for reuse.
- *
+ * A standard deck of cards. 
+ * 52 cards in total made up of 4 suits of cards
  * @author dancye
  * @author Paul Bonenfant Jan 2020
  * @author Megha Patel
+ * @author Nicholas Carvalho
+ * @author Michael Elop
+ * August 9, 2021
  */
+
 public class GroupOfCards {
 
-    //The group of cards, stored in an ArrayList
-    private ArrayList<Card> cards;
-    private int size;//the size of the grouping
+    private final List<Card> cards = new ArrayList<Card>();
 
-    public GroupOfCards(int size) {
-        this.size = size;
+    GroupOfCards() {
+        createDeck();
     }
 
-    /**
-     * A method that will get the group of cards as an ArrayList
-     *
-     * @return the group of cards.
-     */
-    public ArrayList<Card> getCards() {
-        return cards;
+    private void createDeck() {
+        for (Suit s : Suit.values()) {
+            for (Rank r : Rank.values()) {
+                cards.add(new Card(r, s));
+            }
+        }
     }
 
-    public void shuffle() {
-        Collections.shuffle(cards);
+     //shuffles the deck so the cards are random
+    public void Shuffle() {
+        Collections.shuffle(this.cards);
     }
 
-    /**
-     * @return the size of the group of cards
-     */
-    public int getSize() {
-        return size;
+     //returns a List of Card type
+    public List<Card> getCards() {
+        return this.cards;
     }
 
-    /**
-     * @param size the max size for the group of cards
-     */
-    public void setSize(int size) {
-        this.size = size;
+     //returns the number of cards left in the deck
+    public int getCardsCount() {
+        return this.cards.size();
     }
 
-}//end class
+    //deals a card from the top of the deck, removing it from the deck.
+    //returns a card from the end of the arrayList
+    public Card dealCard() {
+        return this.cards.remove(this.cards.size() - 1);
+    }
+
+     //adds a card to the bottom of the deck.
+    public void addCard(Card c) {
+        this.cards.add(0, c);
+    }
+
+    //a String containing all of the cards in order
+    @Override
+    public String toString() {
+        return this.cards.toString();
+    }
+}
