@@ -57,7 +57,7 @@ public class PlayerTest {
     @Test
     public void testSetName() {
         System.out.println("setName");
-        String name = "";
+        String name = "test";
         Player instance = null;
         instance.setName(name);
         // TODO review the generated test code and remove the default call to fail.

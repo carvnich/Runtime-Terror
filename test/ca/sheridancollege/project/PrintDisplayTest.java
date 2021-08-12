@@ -86,7 +86,7 @@ public class PrintDisplayTest {
         Card card1 = null;
         Player player2 = null;
         Card card2 = null;
-        String winner = "";
+        String winner = "test";
         PrintDisplay instance = new PrintDisplay();
         instance.declareRoundWinner(player1, card1, player2, card2, winner);
         // TODO review the generated test code and remove the default call to fail.

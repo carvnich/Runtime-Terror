@@ -56,7 +56,7 @@ public class RankTest {
     @Test
     public void testValueOf() {
         System.out.println("valueOf");
-        String string = "";
+        String string = "test";
         Rank expResult = null;
         Rank result = Rank.valueOf(string);
         assertEquals(expResult, result);
@@ -71,7 +71,7 @@ public class RankTest {
     public void testGetRankName() {
         System.out.println("getRankName");
         Rank instance = null;
-        String expResult = "";
+        String expResult = "test";
         String result = instance.getRankName();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -99,7 +99,7 @@ public class RankTest {
     public void testToString() {
         System.out.println("toString");
         Rank instance = null;
-        String expResult = "";
+        String expResult = "test";
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

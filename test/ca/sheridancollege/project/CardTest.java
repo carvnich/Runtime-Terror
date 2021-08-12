@@ -58,7 +58,7 @@ public class CardTest {
     public void testGetSuitLetter() {
         System.out.println("getSuitLetter");
         Card instance = null;
-        String expResult = "";
+        String expResult = "test";
         String result = instance.getSuitLetter();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -86,7 +86,7 @@ public class CardTest {
     public void testGetRankLetter() {
         System.out.println("getRankLetter");
         Card instance = null;
-        String expResult = "";
+        String expResult = "test";
         String result = instance.getRankLetter();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -114,7 +114,7 @@ public class CardTest {
     public void testGetCard() {
         System.out.println("getCard");
         Card instance = null;
-        String expResult = "";
+        String expResult = "test";
         String result = instance.getCard();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -188,7 +188,7 @@ public class CardTest {
     public void testToString() {
         System.out.println("toString");
         Card instance = null;
-        String expResult = "";
+        String expResult = "test";
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
