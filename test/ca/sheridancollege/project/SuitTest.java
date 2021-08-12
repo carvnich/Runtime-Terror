@@ -56,7 +56,7 @@ public class SuitTest {
     @Test
     public void testValueOf() {
         System.out.println("valueOf");
-        String string = "";
+        String string = "two";
         Suit expResult = null;
         Suit result = Suit.valueOf(string);
         assertEquals(expResult, result);
@@ -99,7 +99,7 @@ public class SuitTest {
     public void testToString() {
         System.out.println("toString");
         Suit instance = null;
-        String expResult = "";
+        String expResult = "test";
         String result = instance.toString();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
